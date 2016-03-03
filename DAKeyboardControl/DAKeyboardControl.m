@@ -116,16 +116,6 @@ static char UIViewKeyboardOpened;
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
     
-    // For the sake of 4.X compatibility
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(inputKeyboardWillChangeFrame:)
-                                                 name:@"UIKeyboardWillChangeFrameNotification"
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(inputKeyboardDidChangeFrame)
-                                                 name:@"UIKeyboardDidChangeFrameNotification"
-                                               object:nil];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(inputKeyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
